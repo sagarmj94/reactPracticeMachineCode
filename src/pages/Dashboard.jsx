@@ -28,7 +28,7 @@ const Dashboard = () => {
       path: "/debounce-search",
       icon: <Timer size={22} />,
       github:
-        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/infiniteScroll/InfiniteScroll.jsx",
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/debounceSearch/DebounceSearch.jsx",
     },
     {
       title: "Kanban Board",
