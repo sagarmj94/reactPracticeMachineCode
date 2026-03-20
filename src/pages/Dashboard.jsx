@@ -35,7 +35,8 @@ const Dashboard = () => {
       desc: "Visual task management system",
       path: "/kanban",
       icon: <Columns size={20} />,
-      github: "your-link",
+      github:
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/kanban/KanbanBoard.jsx",
     },
   ];
 
