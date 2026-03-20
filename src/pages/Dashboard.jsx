@@ -8,6 +8,8 @@ const Dashboard = () => {
       title: "Autocomplete Search",
       desc: "Search users with smart suggestions",
       path: "/autocomplete",
+      github:
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/autocomplete/Autocomplete.jsx",
     },
   ];
 
@@ -23,6 +25,15 @@ const Dashboard = () => {
             onClick={() => navigate(item.path)}
           >
             <h3>{item.title}</h3>
+            <button
+              style={styles.btn}
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(item.github, "_blank");
+              }}
+            >
+              Code ↗
+            </button>
             <p>{item.desc}</p>
           </div>
         ))}
