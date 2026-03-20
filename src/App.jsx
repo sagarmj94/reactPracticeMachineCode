@@ -7,6 +7,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AutocompletePage = lazy(() => import("./pages/AutocompletePage"));
 const InfiniteScrollPage = lazy(() => import("./pages/InfiniteScrollPage"));
+const DebounceSearchPage = lazy(() => import("./pages/DebounceSearchPage"));
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="autocomplete" element={<AutocompletePage />} />
             <Route path="/infinite-scroll" element={<InfiniteScrollPage />} />
+            <Route path="debounce-search" element={<DebounceSearchPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
