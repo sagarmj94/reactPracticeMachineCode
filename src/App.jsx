@@ -8,6 +8,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const AutocompletePage = lazy(() => import("./pages/AutocompletePage"));
 const InfiniteScrollPage = lazy(() => import("./pages/InfiniteScrollPage"));
 const DebounceSearchPage = lazy(() => import("./pages/DebounceSearchPage"));
+const KanbanPage = lazy(() => import("./pages/KanbanPage"));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="autocomplete" element={<AutocompletePage />} />
             <Route path="/infinite-scroll" element={<InfiniteScrollPage />} />
             <Route path="debounce-search" element={<DebounceSearchPage />} />
+            <Route path="kanban" element={<KanbanPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

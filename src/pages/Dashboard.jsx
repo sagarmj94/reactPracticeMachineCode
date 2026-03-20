@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Search, Timer, Infinity as InfinityIcon } from "lucide-react";
+import { Columns } from "lucide-react";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -28,6 +29,13 @@ const Dashboard = () => {
       icon: <Timer size={22} />,
       github:
         "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/infiniteScroll/InfiniteScroll.jsx",
+    },
+    {
+      title: "Kanban Board",
+      desc: "Visual task management system",
+      path: "/kanban",
+      icon: <Columns size={20} />,
+      github: "your-link",
     },
   ];
 
