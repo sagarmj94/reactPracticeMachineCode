@@ -59,10 +59,10 @@ const DebounceSearch = () => {
           />
         </div>
 
-        {/* 🔄 Loading */}
+        {/*Loading */}
         {loading && <p style={styles.loading}>Loading...</p>}
 
-        {/* 📋 Results */}
+        {/*Results */}
         {results.length > 0 && (
           <ul style={styles.dropdown}>
             {results.map((user) => (
@@ -76,7 +76,7 @@ const DebounceSearch = () => {
           </ul>
         )}
 
-        {/* ❌ No results */}
+        {/*No results */}
         {!loading && debouncedQuery && results.length === 0 && (
           <p style={styles.noResult}>No users found</p>
         )}
