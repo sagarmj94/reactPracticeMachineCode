@@ -18,7 +18,8 @@ const Dashboard = () => {
       desc: "Load data while scrolling",
       path: "/infinite-scroll",
       icon: <InfinityIcon size={22} />,
-      github: "https://github.com/your-link",
+      github:
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/infiniteScroll/InfiniteScroll.jsx",
     },
   ];
 
