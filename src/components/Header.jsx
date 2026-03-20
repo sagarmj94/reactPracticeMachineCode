@@ -18,7 +18,7 @@ const Header = () => {
           Dashboard
         </Link>
 
-        <Link
+        {/* <Link
           to="/autocomplete"
           style={{
             ...styles.link,
@@ -26,7 +26,7 @@ const Header = () => {
           }}
         >
           Autocomplete
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

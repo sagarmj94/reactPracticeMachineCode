@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export const Autocomplete = () => {
+const Autocomplete = () => {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [filtered, setFiltered] = useState([]);
@@ -12,7 +12,7 @@ export const Autocomplete = () => {
   }, []);
 
   useEffect(() => {
-    if (query.trim() === "") {
+    if (!query.trim()) {
       setFiltered([]);
       return;
     }
@@ -24,27 +24,57 @@ export const Autocomplete = () => {
     setFiltered(result);
   }, [query, data]);
 
-  console.log(filtered);
   return (
-    <div>
+    <div style={styles.container}>
       <input
         type="text"
-        placeholder="Search user..."
-        style={{ width: "100%", padding: "10px" }}
+        placeholder="Search users..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        style={styles.input}
       />
-      <ul>
-        {filtered.map((user) => (
-          <li
-            key={user.id}
-            style={{ padding: "8px", cursor: "pointer" }}
-            onClick={() => setQuery(user.name)}
-          >
-            {user.name}
-          </li>
-        ))}
-      </ul>
+
+      {filtered.length > 0 && (
+        <div style={styles.dropdown}>
+          {filtered.map((user) => (
+            <div
+              key={user.id}
+              style={styles.item}
+              onClick={() => setQuery(user.name)}
+            >
+              {user.name}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
+
+const styles = {
+  container: {
+    position: "relative",
+    width: "300px",
+  },
+  input: {
+    width: "100%",
+    padding: "10px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+  },
+  dropdown: {
+    position: "absolute",
+    top: "45px",
+    width: "100%",
+    background: "#fff",
+    borderRadius: "8px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    overflow: "hidden",
+  },
+  item: {
+    padding: "10px",
+    cursor: "pointer",
+  },
+};
+
+export default Autocomplete;
