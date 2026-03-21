@@ -41,10 +41,10 @@ const Dashboard = () => {
     {
       title: "Drag and Drop",
       desc: "Drage and drop tot task",
-      path: "/dragable",
+      path: "/dragdrop",
       icon: <Columns size={20} />,
       github:
-        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/kanban/KanbanBoard.jsx",
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/dragable/dragable.jsx",
     },
   ];
 
