@@ -38,6 +38,14 @@ const Dashboard = () => {
       github:
         "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/kanban/KanbanBoard.jsx",
     },
+    {
+      title: "Drag and Drop",
+      desc: "Drage and drop tot task",
+      path: "/dragable",
+      icon: <Columns size={20} />,
+      github:
+        "https://github.com/sagarmj94/reactPracticeMachineCode/blob/main/src/features/kanban/KanbanBoard.jsx",
+    },
   ];
 
   return (
